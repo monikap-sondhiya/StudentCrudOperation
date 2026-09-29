@@ -22,7 +22,7 @@ public class StudentController {
     public ResponseEntity<Student> saveStudent(@RequestBody Student student) {
 
         Student savedStudent = studentService.saveStudent(student);
-
+        System.out.println(savedStudent);
         return new ResponseEntity<>(savedStudent, HttpStatus.CREATED);
     }
 
